@@ -22,9 +22,19 @@ public class Task05 {
         int healthPoints = (args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[0]));
         double regenerationPercentFromCurrentHealth = (args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[1]));
         int averageDamagePerHour = (args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[2]));
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int hour = 0;
+        double currentHealthPoints = (double)healthPoints;
+        while(currentHealthPoints > 0.0D) {
+            currentHealthPoints = currentHealthPoints + currentHealthPoints * regenerationPercentFromCurrentHealth / 100.0D - (double)averageDamagePerHour;
+            ++hour;
+            if (hour > 24) {
+                break;
+            }
+        }
+        if (currentHealthPoints > 0.0D) {
+            System.out.println("-1");
+        } else {
+            System.out.println(hour);
+        }
     }
 }
