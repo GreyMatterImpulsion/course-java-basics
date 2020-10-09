@@ -16,16 +16,16 @@ import java.util.Scanner;
  */
 public class Task04 {
     public static void main(String[] args) {
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
         Scanner scanner = new Scanner(System.in);
-
-        // Код необходимый для тестирования, не изменять
-        int healthPoints = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[0]);
-        double regenerationPercentFromCurrentHealth = (args.length != 3) ? scanner.nextDouble() : Double.parseDouble(args[1]);
-        double hoursAfterRespawn = (args.length != 3) ? scanner.nextDouble() : Double.parseDouble(args[2]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int healthPoints = args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        double regenerationPercentFromCurrentHealth = args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[1]);
+        double hoursAfterRespawn = args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[2]);
+        double finalHp;
+        for(finalHp = (double)healthPoints; hoursAfterRespawn != 0.0D; --hoursAfterRespawn) {
+            double regeneration = finalHp * regenerationPercentFromCurrentHealth / 100.0D;
+            finalHp += regeneration;
+        }
+        healthPoints = (int)finalHp;
+        System.out.println(healthPoints);
     }
 }
