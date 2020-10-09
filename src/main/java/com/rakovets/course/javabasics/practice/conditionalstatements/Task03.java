@@ -13,15 +13,16 @@ import java.util.Scanner;
  */
 public class Task03 {
     public static void main(String[] args) {
-        //FIXME
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
-
-        // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
-        int healthPointPercentage = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int healthPointPercentage = args.length != 1 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        if (healthPointPercentage >= 75 && healthPointPercentage <= 100) {
+            System.out.println("GREEN");
+        } else if (healthPointPercentage >= 50 && healthPointPercentage < 75) {
+            System.out.println("YELLOW");
+        } else if (healthPointPercentage >= 25 && healthPointPercentage < 50) {
+            System.out.println("ORANGE");
+        } else if (healthPointPercentage < 25 && healthPointPercentage >= 0) {
+            System.out.println("RED");
+        }
     }
 }
