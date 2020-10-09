@@ -15,15 +15,28 @@ import java.util.Scanner;
  */
 public class Task02 {
     public static void main(String[] args) {
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
         Scanner scanner = new Scanner(System.in);
+        int rows = args.length != 2 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        boolean headerRowEnable = args.length != 2 ? scanner.nextBoolean() : Boolean.parseBoolean(args[1]);
+        int i;
+        if (!headerRowEnable) {
+            i = 0;
 
-        // Код необходимый для тестирования, не изменять
-        int rows = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
-        boolean headerRowEnable = (args.length != 2) ? scanner.nextBoolean() : Boolean.parseBoolean(args[1]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+            while(i < rows - 1) {
+                ++i;
+                System.out.println(i);
+            }
+            ++i;
+            System.out.print(i);
+        } else {
+            System.out.println("");
+            i = 0;
+            while(i < rows - 2) {
+                ++i;
+                System.out.println(i);
+            }
+            ++i;
+            System.out.print(i);
+        }
     }
 }
