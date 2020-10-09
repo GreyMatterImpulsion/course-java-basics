@@ -1,5 +1,6 @@
 package com.rakovets.course.javabasics.practice.loops;
 
+import java.util.Locale;
 import java.util.Scanner;
 
 /**
@@ -15,16 +16,17 @@ import java.util.Scanner;
  */
 public class Task03 {
     public static void main(String[] args) {
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
         Scanner scanner = new Scanner(System.in);
-
-        // Код необходимый для тестирования, не изменять
-        double depositAmount = (args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[0]));
-        double annualDepositPercent = (args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[1]));
-        int depositTerm = (args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[2]));
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        double depositAmount = args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[0]);
+        double annualDepositPercent = args.length != 3 ? scanner.nextDouble() : Double.parseDouble(args[1]);
+        int depositTerm = args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[2]);
+        double finalDeposit = depositAmount;
+        double profit;
+        for(int years = 1; years <= depositTerm; finalDeposit += profit) {
+            profit = finalDeposit * annualDepositPercent / 100.0D;
+            ++years;
+        }
+        String firstResult = String.format(Locale.ROOT, "%.2f", finalDeposit);
+        System.out.println(firstResult);
     }
 }
