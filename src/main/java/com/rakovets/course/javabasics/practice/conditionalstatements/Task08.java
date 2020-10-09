@@ -14,16 +14,19 @@ import java.util.Scanner;
  */
 public class Task08 {
     public static void main(String[] args) {
-        //FIXME
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
-
-        // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
-        int damage = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
-        String typeMob = (args.length != 2) ? scanner.next() : args[1];
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int damage = args.length != 2 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        String typeMob = args.length != 2 ? scanner.next() : args[1];
+        if (!typeMob.equals("UNDEAD") && !typeMob.equals("ZOMBIE")) {
+            if (typeMob.equals("SAINT")) {
+                damage = (int)((double)damage * 0.5D);
+                System.out.println(damage);
+            } else {
+                System.out.println(damage);
+            }
+        } else {
+            damage = (int)((double)damage * 1.5D);
+            System.out.println(damage);
+        }
     }
 }
