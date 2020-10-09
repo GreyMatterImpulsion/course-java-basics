@@ -26,8 +26,19 @@ public class Task06 {
         int tanksKilledFirstPlayer = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[0]);
         int tanksKilledSecondPlayer = (args.length != 2) ? scanner.nextInt() : Integer.parseInt(args[1]);
 
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int firstPlayerPoints = tanksKilledFirstPlayer * 100;
+        int secondPlayerPoints = tanksKilledSecondPlayer * 100;
+        if (tanksKilledFirstPlayer > tanksKilledSecondPlayer) {
+            firstPlayerPoints += 500;
+            System.out.print("Player 1: " + firstPlayerPoints + ". ");
+            System.out.println("Player 2: " + secondPlayerPoints);
+        } else if (tanksKilledFirstPlayer < tanksKilledSecondPlayer) {
+            secondPlayerPoints += 500;
+            System.out.print("Player 1: " + firstPlayerPoints + ". ");
+            System.out.println("Player 2: " + secondPlayerPoints);
+        } else {
+            System.out.print("Player 1: " + tanksKilledFirstPlayer * 100);
+            System.out.println(". Player 2: " + tanksKilledSecondPlayer * 100);
+        }
     }
 }
