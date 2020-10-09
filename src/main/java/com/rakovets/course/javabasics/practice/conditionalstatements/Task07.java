@@ -15,15 +15,12 @@ import java.util.Scanner;
 
 public class Task07 {
     public static void main(String[] args) {
-        //FIXME
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
-
-        // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
-        int year = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int year = args.length != 1 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        if (year % 4 == 0 & year % 400 != 0) {
+            System.out.println("leap year");
+        } else {
+            System.out.println("not a leap year");
+        }
     }
 }
