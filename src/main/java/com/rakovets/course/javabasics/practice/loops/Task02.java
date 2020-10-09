@@ -26,8 +26,6 @@ public class Task02 {
                 ++i;
                 System.out.println(i);
             }
-            ++i;
-            System.out.print(i);
         } else {
             System.out.println("");
             i = 0;
@@ -35,8 +33,8 @@ public class Task02 {
                 ++i;
                 System.out.println(i);
             }
-            ++i;
-            System.out.print(i);
         }
+        ++i;
+        System.out.print(i);
     }
 }
