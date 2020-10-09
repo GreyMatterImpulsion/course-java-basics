@@ -13,14 +13,14 @@ import java.util.Scanner;
  */
 public class Task01 {
     public static void main(String[] args) {
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
         Scanner scanner = new Scanner(System.in);
-
-        // Код необходимый для тестирования, не изменять
-        int rows = (args.length != 1) ? scanner.nextInt() : Integer.parseInt(args[0]);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int rows = args.length != 1 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        int i = 0;
+        while(i < rows - 1) {
+            ++i;
+            System.out.println(i);
+        }
+        ++i;
+        System.out.print(i);
     }
 }
