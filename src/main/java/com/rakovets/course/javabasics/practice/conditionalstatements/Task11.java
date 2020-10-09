@@ -19,15 +19,18 @@ import java.util.Scanner;
 
 public class Task11 {
     public static void main(String[] args) {
-        //FIXME
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
-
-        // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
-        char letter = (args.length != 1) ? scanner.next().charAt(0) : args[0].charAt(0);
-
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        char letter = args.length != 1 ? scanner.next().charAt(0) : args[0].charAt(0);
+        if ((letter < 'A' || letter > 'Z') && (letter < 'a' || letter > 'z')) {
+            if (letter >= 1040 && letter <= 1113) {
+                System.out.println("cyrillic");
+            } else if (letter >= '0' && letter <= '9') {
+                System.out.println("digit");
+            } else {
+                System.out.println("undefined");
+            }
+        } else {
+            System.out.println("latin");
+        }
     }
 }
