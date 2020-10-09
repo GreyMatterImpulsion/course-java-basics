@@ -40,17 +40,100 @@ import java.util.Scanner;
  */
 public class Task12 {
     public static void main(String[] args) {
-        //FIXME
-        // Ввод данных осуществляется в Console, для проверки различных вариантов входных параметров
-
-        // Код необходимый для тестирования, не изменять
         Scanner scanner = new Scanner(System.in);
-        int day = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[0]);
-        int month = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[1]);
-        int year = (args.length != 3) ? scanner.nextInt() : Integer.parseInt(args[2]);
+        int day = args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[0]);
+        int month = args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[1]);
+        int year = args.length != 3 ? scanner.nextInt() : Integer.parseInt(args[2]);
+        if (month == 3 & day >= 21) {
+            System.out.print("Zodiac Sign: Ram. ");
+        } else if (month == 4 & day <= 20) {
+            System.out.print("Zodiac Sign: Ram. ");
+        } else if (month == 4 & day >= 21) {
+            System.out.print("Zodiac Sign: Bull. ");
+        } else if (month == 5 & day <= 20) {
+            System.out.print("Zodiac Sign: Bull. ");
+        } else if (month == 5 & day >= 21) {
+            System.out.print("Zodiac Sign: Twins. ");
+        } else if (month == 6 & day <= 21) {
+            System.out.print("Zodiac Sign: Twins. ");
+        } else if (month == 6 & day >= 22) {
+            System.out.print("Zodiac Sign: Crab. ");
+        } else if (month == 7 & day <= 22) {
+            System.out.print("Zodiac Sign: Crab. ");
+        } else if (month == 7 & day >= 23) {
+            System.out.print("Zodiac Sign: Lion. ");
+        } else if (month == 8 & day <= 22) {
+            System.out.print("Zodiac Sign: Lion. ");
+        } else if (month == 8 & day >= 23) {
+            System.out.print("Zodiac Sign: Maiden. ");
+        } else if (month == 9 & day <= 21) {
+            System.out.print("Zodiac Sign: Maiden. ");
+        } else if (month == 9 & day >= 22) {
+            System.out.print("Zodiac Sign: Scales. ");
+        } else if (month == 10 & day <= 22) {
+            System.out.print("Zodiac Sign: Scales. ");
+        } else if (month == 10 & day >= 23) {
+            System.out.print("Zodiac Sign: Scorpion. ");
+        } else if (month == 11 & day <= 22) {
+            System.out.print("Zodiac Sign: Scorpion. ");
+        } else if (month == 11 & day >= 22) {
+            System.out.print("Zodiac Sign: Archer. ");
+        } else if (month == 12 & day <= 21) {
+            System.out.print("Zodiac Sign: Archer. ");
+        } else if (month == 12 & day >= 22) {
+            System.out.print("Zodiac Sign: Goat. ");
+        } else if (month == 1 & day <= 20) {
+            System.out.print("Zodiac Sign: Goat. ");
+        } else if (month == 1 & day >= 21) {
+            System.out.print("Zodiac Sign:  Water-bearer. ");
+        } else if (month == 2 & day <= 19) {
+            System.out.print("Zodiac Sign: Water-bearer. ");
+        } else if (month == 2 & day >= 20) {
+            System.out.print("Zodiac Sign: Fish. ");
+        } else if (month == 3 & day <= 20) {
+            System.out.print("Zodiac Sign: Fish. ");
+        }
 
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используяся переменные объявленные выше (их можно изменять)
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
+        int i;
+        for(i = 0; (year - i) % 12 != 0; ++i) {
+        }
+
+        switch(i) {
+            case 0:
+                System.out.println("Chinese Zodiac: Monkey");
+                break;
+            case 1:
+                System.out.println("Chinese Zodiac: Rooster");
+                break;
+            case 2:
+                System.out.println("Chinese Zodiac: Dog");
+                break;
+            case 3:
+                System.out.println("Chinese Zodiac: Pig");
+                break;
+            case 4:
+                System.out.println("Chinese Zodiac: Rat");
+                break;
+            case 5:
+                System.out.println("Chinese Zodiac: Ox");
+                break;
+            case 6:
+                System.out.println("Chinese Zodiac: Tiger");
+                break;
+            case 7:
+                System.out.println("Chinese Zodiac: Rabbit");
+                break;
+            case 8:
+                System.out.println("Chinese Zodiac: Dragon");
+                break;
+            case 9:
+                System.out.println("Chinese Zodiac: Snake");
+                break;
+            case 10:
+                System.out.println("Chinese Zodiac: Horse");
+                break;
+            case 11:
+                System.out.println("Chinese Zodiac: Ram");
+        }
     }
 }
