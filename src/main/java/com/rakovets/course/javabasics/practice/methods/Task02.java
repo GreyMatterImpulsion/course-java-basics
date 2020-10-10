@@ -24,9 +24,14 @@ public class Task02 extends StandardInputTask {
      * @return приветствие согласно шаблону 'Good morning/day/evening/night'
      */
     static String getGreetingByHour(int hour) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        if (hour >= 0 & hour < 6) {
+            return "Good night";
+        } else if (hour >= 6 & hour < 12) {
+            return "Good morning";
+        } else if (hour >= 12 & hour < 18) {
+            return "Good day";
+        } else {
+            return hour >= 18 & hour < 24 ? "Good evening" : null;
+        }
     }
 }
