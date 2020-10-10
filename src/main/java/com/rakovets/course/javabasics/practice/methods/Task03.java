@@ -29,9 +29,15 @@ public class Task03 extends StandardInputTask {
      * @return null/'RED'/'ORANGE'/'YELLOW'/'GREEN'
      */
     static String getColorHealthPoint(int currentHealthPoint, int maxHealthPoint) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        double hpPercent = (double)((float)currentHealthPoint * 100.0F / (float)maxHealthPoint);
+        if (hpPercent >= 75.0D && hpPercent <= 100.0D) {
+            return "GREEN";
+        } else if (hpPercent >= 50.0D && hpPercent < 75.0D) {
+            return "YELLOW";
+        } else if (hpPercent >= 25.0D && hpPercent < 50.0D) {
+            return "ORANGE";
+        } else {
+            return hpPercent < 25.0D && hpPercent > 0.0D ? "RED" : null;
+        }
     }
 }
