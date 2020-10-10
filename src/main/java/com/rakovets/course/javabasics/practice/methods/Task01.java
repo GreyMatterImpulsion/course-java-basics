@@ -27,9 +27,6 @@ public class Task01 extends StandardInputTask {
      * @return true когда вошел, false если не вошел
      */
     static boolean isTopPlayer(int sizeTop, int positionPlayerByDamage) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return false;
+        return positionPlayerByDamage <= sizeTop;
     }
 }
