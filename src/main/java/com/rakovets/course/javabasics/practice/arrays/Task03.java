@@ -2,6 +2,9 @@ package com.rakovets.course.javabasics.practice.arrays;
 
 import com.rakovets.course.javabasics.util.StandardInputTask;
 
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+
 /**
  * Разработать программу для электронного дневника:
  * которая работает с отметками по каждому предмету.
@@ -29,10 +32,19 @@ public class Task03 extends StandardInputTask {
      * @return средняя арифметическая отметка
      */
     static double[] getAverageMark(int[][] marks) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        double sumMarks = 0;
+        double[] averMarks = new double[marks.length];
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+                sumMarks += + marks[i][j];
+            }
+            double averMark = sumMarks / marks[i].length;
+            BigDecimal result = new BigDecimal(Double.toString(averMark));
+            result = result.setScale(2, RoundingMode.HALF_UP);
+            averMarks[i] = result.doubleValue();
+            sumMarks = 0;
+        }
+        return averMarks;
     }
 
     /**
@@ -42,10 +54,18 @@ public class Task03 extends StandardInputTask {
      * @return минимальная отметка
      */
     static int[] getMinMark(int[][] marks) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] minMarksArray = new int[marks.length];
+        int minMark = marks[0][0];
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+                if (minMark > marks[i][j]) {
+                    minMark = marks[i][j];
+                }
+                minMarksArray[i] = minMark;
+            }
+            minMark = 9999;
+        }
+        return minMarksArray;
     }
 
     /**
@@ -55,10 +75,18 @@ public class Task03 extends StandardInputTask {
      * @return максимальная отметка
      */
     static int[] getMaxMark(int[][] marks) {
-        //TODO
-        // Код, решающий задачу пишем ниже, при этом используя параметры метода
-        // Для проверки решения необходимо запустить @Test для данного class (в директории test)
-        return null;
+        int[] maxMarksArray = new int[marks.length];
+        int maxMark = marks[0][0];
+        for (int i = 0; i < marks.length; i++) {
+            for (int j = 0; j < marks[i].length; j++) {
+                if (maxMark < marks[i][j]) {
+                    maxMark = marks[i][j];
+                }
+                maxMarksArray[i] = maxMark;
+            }
+            maxMark = 0;
+        }
+        return maxMarksArray;
     }
 
     private static int[][] nextArray(int countDisciplines, int countSemesters) {
