@@ -14,6 +14,11 @@ public class Time {
         this.seconds = seconds;
     }
 
+    public int getTotalSeconds(int hours, int minutes, int seconds) {
+        int totalSeconds = (hours * 60 * 60) + (minutes * 60) + seconds;
+        return  totalSeconds;
+    }
+
         public int getHours() {
             return hours;
         }
@@ -36,10 +41,5 @@ public class Time {
 
         public void setSeconds(int seconds) {
         this.seconds = seconds;
-        }
-
-        public int getTotalSeconds(int hours, int minutes, int seconds) {
-        int totalSeconds = (hours * 60 * 60) + (minutes * 60) + seconds;
-        return  totalSeconds;
         }
 }
