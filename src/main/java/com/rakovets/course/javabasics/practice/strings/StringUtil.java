@@ -89,7 +89,7 @@ public class StringUtil {
 
     public static String getWordsNumber(String string) {
         String[] words = string.split(" ");
-        System.out.println(words);
+        System.out.println(words.toString(string.split(" ")));
         int a = 0;
         for (String word : words) {
             word.trim();
@@ -99,6 +99,10 @@ public class StringUtil {
             }
         }
         return String.valueOf(a);
+    }
+
+    public static void main(String[] args) {
+        getWordsNumber("123 123 123   123 1312 123");
     }
 }
 
