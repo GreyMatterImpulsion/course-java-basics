@@ -98,12 +98,7 @@ public class StringUtil {
                 a--;
             }
         }
-
         return String.valueOf(a);
-    }
-
-    public static void main(String[] args) {
-        getWordsNumber("aa bbb ccc ddd ");
     }
 }
 
