@@ -1,6 +1,7 @@
 package com.rakovets.course.javabasics.practice.strings;
 
 public class StringUtil {
+
     public static String getStringsConcat(String string1, String string2) {
         return string1.concat(string2);
     }
@@ -35,4 +36,57 @@ public class StringUtil {
             return "Nein";
         }
     }
+
+    public static String getBracketsReplace(String string) {
+        return string.replace('(', ')');
+    }
+
+    public static String getStringStartsAndEndsWithWord(String string, String word) {
+        string = string.toLowerCase();
+        word = word.toLowerCase();
+            if (string.startsWith(word) && string.endsWith(word)) {
+                return String.valueOf(true);
+            } else {
+                return String.valueOf(false);
+            }
+    }
+
+    public static String getVowelsNumber(String string) {
+        string = string.toLowerCase();
+        int c;
+        int a = 0;
+        char symbol;
+        for (c = 0; c < string.length(); c++ ) {
+            symbol = string.charAt(c);
+            if (symbol == 'a' || symbol == 'e' || symbol == 'y' || symbol == 'i' || symbol == 'o' || symbol == 'u') {
+                a++;
+            }
+        }
+        return String.valueOf(a);
+    }
+
+    public static String getDotsAndCommasNumber(String string) {
+        int c;
+        int a = 0;
+        char symbol;
+        for (c = 0; c < string.length(); c++ ) {
+            symbol = string.charAt(c);
+            if (symbol == '.' || symbol == ',' || symbol == '!') {
+                a++;
+            }
+        }
+        return String.valueOf(a);
+    }
+
+    public static String getForwardEqualBackward(String string) {
+        StringBuffer strBuffer = new StringBuffer(string);
+        if (strBuffer.toString().equals(strBuffer.reverse().toString())) {
+            return String.valueOf(true);
+        } else {
+            return String.valueOf(false);
+        }
+    }
+
+
 }
+

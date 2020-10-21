@@ -52,5 +52,44 @@ public class StringUtilTest {
         Assertions.assertEquals("Nein", stringUtil.get10To23Chars("Was wollen wir"));
     }
 
+    @Test
+    void getBracketsReplaceTest() {
+        Assertions.assertEquals("))))))))))))))))))", stringUtil.getBracketsReplace(")()()(()())))((()("));
+        Assertions.assertEquals("1234)", stringUtil.getBracketsReplace("1234("));
+        Assertions.assertEquals("11111", stringUtil.getBracketsReplace("11111"));
+    }
 
+    @Test
+    void getStringStartsAndEndsWithWordTest() {
+        Assertions.assertEquals("true", stringUtil.getStringStartsAndEndsWithWord("Blumen", "BlumeN"));
+        Assertions.assertEquals("true", stringUtil.getStringStartsAndEndsWithWord("Geschaft ist Geschaft", "Geschaft"));
+        Assertions.assertEquals("false", stringUtil.getStringStartsAndEndsWithWord("Was ist da?", "123"));
+    }
+
+    @Test
+    void getVowelsNumberTest() {
+        Assertions.assertEquals("2", stringUtil.getVowelsNumber("aba"));
+        Assertions.assertEquals("6", stringUtil.getVowelsNumber("eyuIOA"));
+        Assertions.assertEquals("0", stringUtil.getVowelsNumber("1245776543"));
+        Assertions.assertEquals("1", stringUtil.getVowelsNumber("124  5776i543"));
+        Assertions.assertEquals("4", stringUtil.getVowelsNumber("Entschuldigung"));
+    }
+
+    @Test
+    void getDotsAndCommasNumberTest() {
+        Assertions.assertEquals("1", stringUtil.getDotsAndCommasNumber("aba!"));
+        Assertions.assertEquals("0", stringUtil.getDotsAndCommasNumber("eyuIOA"));
+        Assertions.assertEquals("4", stringUtil.getDotsAndCommasNumber("12!457.76543,,"));
+        Assertions.assertEquals("4", stringUtil.getDotsAndCommasNumber("1!24.\\5776i543,, "));
+        Assertions.assertEquals("12", stringUtil.getDotsAndCommasNumber("....,,,,!!!!"));
+    }
+
+    @Test
+    void getForwardEqualBackwardTest() {
+        Assertions.assertEquals("true", stringUtil.getForwardEqualBackward("abba"));
+        Assertions.assertEquals("false", stringUtil.getForwardEqualBackward("eyu123"));
+        Assertions.assertEquals("false", stringUtil.getForwardEqualBackward("asaaaaaaa"));
+        Assertions.assertEquals("true", stringUtil.getForwardEqualBackward("level"));
+        Assertions.assertEquals("true", stringUtil.getForwardEqualBackward("123321"));
+    }
 }
