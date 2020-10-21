@@ -87,6 +87,23 @@ public class StringUtil {
         }
     }
 
+    public static String getWordsNumber(String string) {
+        String[] words = string.split(" ");
+        System.out.println(words);
+        int a = 0;
+        for (String word : words) {
+            word.trim();
+            a++;
+            if (word.isEmpty()) {
+                a--;
+            }
+        }
 
+        return String.valueOf(a);
+    }
+
+    public static void main(String[] args) {
+        getWordsNumber("aa bbb ccc ddd ");
+    }
 }
 

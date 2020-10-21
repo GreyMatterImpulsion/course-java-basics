@@ -92,4 +92,9 @@ public class StringUtilTest {
         Assertions.assertEquals("true", stringUtil.getForwardEqualBackward("level"));
         Assertions.assertEquals("true", stringUtil.getForwardEqualBackward("123321"));
     }
+
+    @Test
+    void getWordsNumberTest() {
+        Assertions.assertEquals("6", stringUtil.getWordsNumber("abba  dfga hgfsdf 123 654354 3453"));
+    }
 }
