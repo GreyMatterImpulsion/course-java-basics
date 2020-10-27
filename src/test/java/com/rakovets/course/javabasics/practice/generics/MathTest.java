@@ -35,6 +35,13 @@ public class MathTest {
         Assertions.assertEquals(20, mathTestInteger.getAverage(array2));
     }
 
+    @Test
+    void getMaxOfArrayTest() {
+        Double[] array = {10.0, 15.0, 25.0, 20.0, 30.0};
+        Integer[] array2 = {10, 15, 20, 25, 30};
+        Assertions.assertEquals(30.0, mathTestDouble.getMaxOfArray(array));
+        Assertions.assertEquals(30, mathTestInteger.getMaxOfArray(array2));
+    }
 
 }
 

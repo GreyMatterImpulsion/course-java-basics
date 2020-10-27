@@ -50,4 +50,15 @@ public class Math <T extends Number & Comparable> {
         return result;
     }
 
+
+//-------------------------Task 4
+    public T getMaxOfArray(T array[]) {
+        T result = array[0];
+        for (int i = 0; i < array.length; i++) {
+            if (result.compareTo(array[i]) < 0) {
+                result = array[i];
+            }
+        }
+        return result;
+    }
 }
