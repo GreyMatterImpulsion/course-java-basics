@@ -21,9 +21,21 @@ public class MathTest {
     }
 
     @Test
-    void getMinOf5Params() {
+    void getMinOf5ParamsTest() {
         Assertions.assertEquals(1, mathTestInteger.getMinOf5Params(1,2,3,4,5));
         Assertions.assertEquals(1.2, mathTestDouble.getMinOf5Params(1.5,1.2,3.0,5.8,5.9));
-        Assertions.assertEquals(0.0, mathTestDouble.getMinOf5Params(0.0,1.2,3.0,5.8,5.9));
+        Assertions.assertEquals(0.0, mathTestDouble.getMinOf5Params(0.0,1.2,3.0,3.0,5.9));
     }
+
+    @Test
+    void getAverageTest() {
+        Double[] array = {10.0, 15.0, 25.0, 20.0, 30.0};
+        Integer[] array2 = {10, 15, 20, 25, 30};
+        Assertions.assertEquals(20.0, mathTestDouble.getAverage(array));
+        Assertions.assertEquals(20, mathTestInteger.getAverage(array2));
+    }
+
+
 }
+
+
