@@ -37,12 +37,27 @@ public class MathTest {
 
     @Test
     void getMaxOfArrayTest() {
-        Double[] array = {10.0, 15.0, 25.0, 20.0, 30.0};
+        Double[] array = {10.0, 15.0, 25.0, 29.9, 30.0};
         Integer[] array2 = {10, 15, 20, 25, 30};
         Assertions.assertEquals(30.0, mathTestDouble.getMaxOfArray(array));
         Assertions.assertEquals(30, mathTestInteger.getMaxOfArray(array2));
     }
 
+    @Test
+    void getMinOfArrayTest() {
+        Double[] array = {10.0, 15.0, 25.0, 29.9, 30.0};
+        Integer[] array2 = {10, 15, 20, 25, 30};
+        Assertions.assertEquals(10.0, mathTestDouble.getMinOfArray(array));
+        Assertions.assertEquals(10, mathTestInteger.getMinOfArray(array2));
+    }
+
+    @Test
+    void getArraySortedTest() {
+        Double[] array = {10.0, 15.5, 25.0, 29.9, 30.0};
+        Integer[] array2 = {10, 26, 44, 25, 30};
+        Assertions.assertArrayEquals(new Double[] {10.0, 15.5, 25.0, 29.9, 30.0}, mathTestDouble.getArraySorted(array));
+        Assertions.assertArrayEquals(new Integer[] {10, 25, 26, 30, 44}, mathTestInteger.getArraySorted(array2));
+    }
 }
 
 

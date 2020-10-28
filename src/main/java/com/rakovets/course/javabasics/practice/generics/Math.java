@@ -1,5 +1,7 @@
 package com.rakovets.course.javabasics.practice.generics;
 
+import java.util.Arrays;
+
 public class Math <T extends Number & Comparable> {
 
 //-------------------------Task 1
@@ -60,5 +62,23 @@ public class Math <T extends Number & Comparable> {
             }
         }
         return result;
+    }
+
+//-------------------------Task 5
+    public T getMinOfArray(T array[]) {
+        T result = array[0];
+         for (int i = 0; i < array.length; i++) {
+            if (result.compareTo(array[i]) > 0) {
+                result = array[i];
+            }
+        }
+    return result;
+    }
+
+//-------------------------Task 6
+
+    public T[] getArraySorted(T[] array) {
+        Arrays.sort(array);
+        return array;
     }
 }
