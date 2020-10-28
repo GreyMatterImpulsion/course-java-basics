@@ -1,10 +1,9 @@
 package com.rakovets.course.javabasics.practice.generics;
 
-public final class PairUtil <K, V> {
-    public K key;
-    public V value;
+public final class PairUtil<K, V> {
 
-    Pair pair = new Pair();
-
-    //swap(pair) {
+    public Pair<V,K> swap(Pair<K, V> pair) {
+        Pair<V,K> obj1 = new Pair<>(pair.getV(), pair.getK());
+        return obj1;
     }
+}
