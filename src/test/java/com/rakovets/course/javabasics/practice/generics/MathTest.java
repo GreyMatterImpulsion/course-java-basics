@@ -58,6 +58,13 @@ public class MathTest {
         Assertions.assertArrayEquals(new Double[] {10.0, 15.5, 25.0, 29.9, 30.0}, mathTestDouble.getArraySorted(array));
         Assertions.assertArrayEquals(new Integer[] {10, 25, 26, 30, 44}, mathTestInteger.getArraySorted(array2));
     }
-}
 
+    @Test
+    void doBinarySearchTest() {
+        Double[] array = {10.0, 5.5, 25.0, 29.9, 30.0};
+        Integer[] array2 = {10, 26, 44, 25, 30};
+        Assertions.assertEquals(5.5, mathTestDouble.doBinarySearch(array, 5.5));
+        Assertions.assertEquals( 30, mathTestInteger.doBinarySearch(array2, 30));
+    }
+}
 

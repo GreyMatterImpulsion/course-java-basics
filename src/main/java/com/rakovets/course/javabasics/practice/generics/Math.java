@@ -81,4 +81,23 @@ public class Math <T extends Number & Comparable> {
         Arrays.sort(array);
         return array;
     }
+
+//-------------------------Task 7
+
+    public T doBinarySearch(T []array, T wanted) {
+        T[] sortedArray = getArraySorted(array);
+        int start = 0;
+        int end = sortedArray.length;
+        while (start <= end) {
+            int middle = (start + end) / 2;
+            if (sortedArray[middle].equals(wanted)) {
+                return sortedArray[middle];
+            } else if (sortedArray[middle].compareTo(wanted) > 0) {
+                end = middle;
+            } else {
+                start = middle;
+            }
+        }
+        return null;
+    }
 }
