@@ -1,6 +1,6 @@
 package com.rakovets.course.javabasics.practice.jcf.collection;
 
-import org.junit.jupiter.api.Assertions;
+import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class StringCollectionUtilTest {
         gList.add("rosa");
         gList.add("lila");
         gList.add("schwarz");
-        Assertions.assertEquals(Arrays.<String>asList("die farben", "braun", "*", "rot", "*", "weiss", "*", "*", "*", "schwarz"),
+        assertEquals(Arrays.<String>asList("die farben", "braun", "*", "rot", "*", "weiss", "*", "*", "*", "schwarz"),
                 stringCollectionUtil.resetWordsByLength(gList, 4));
     }
 
@@ -40,7 +40,7 @@ public class StringCollectionUtilTest {
         gList.add("rosa");
         gList.add("lila");
         gList.add("schwarz");
-        Assertions.assertEquals(Arrays.<String>asList("die farben", "braun", "rot", "weiss", "schwarz"),
+        assertEquals(Arrays.<String>asList("die farben", "braun", "rot", "weiss", "schwarz"),
                 stringCollectionUtil.removeWordsByLength(gList, 4));
     }
 }
