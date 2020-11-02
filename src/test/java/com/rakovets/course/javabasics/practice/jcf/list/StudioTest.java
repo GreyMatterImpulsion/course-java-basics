@@ -16,9 +16,5 @@ public class StudioTest {
             add(new Actor("Harley", "Davidson", 53, 270));
         }};
         Studio studio = new Studio(actors);
-
-        actors.sort(Studio.ActorLastNameComparator);
-        assertEquals("Carlson Davidson Jackson Michelson Robertson", studio.getLastNames());
-//        assertEquals("63, 53, 45, 31, 27", actors.sort(new Studio.ActorAgeComparator()));
     }
 }
