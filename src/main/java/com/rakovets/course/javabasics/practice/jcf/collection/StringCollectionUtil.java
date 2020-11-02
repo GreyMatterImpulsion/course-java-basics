@@ -1,11 +1,12 @@
 package com.rakovets.course.javabasics.practice.jcf.collection;
 
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 
 public class StringCollectionUtil {
-    public List<String> resetWordsByLength(List<String> list, int i) {
-        List<String> censoredList = new ArrayList<String>();
+    public Collection<String> resetWordsByLength(Collection<String> list, int i) {
+        Collection<String> censoredList = new ArrayList<String>();
         String star = "*";
         for (String str : list) {
             String result = str.length() == i ? star : str;
@@ -14,8 +15,8 @@ public class StringCollectionUtil {
         return censoredList;
     }
 
-    public List<String> removeWordsByLength(List<String> list, int i) {
-        List<String> newList = new ArrayList<String>();
+    public Collection<String> removeWordsByLength(Collection<String> list, int i) {
+        Collection<String> newList = new ArrayList<String>();
         for (String str : list) {
             if (str.length() != i) {
                 newList.add(str);

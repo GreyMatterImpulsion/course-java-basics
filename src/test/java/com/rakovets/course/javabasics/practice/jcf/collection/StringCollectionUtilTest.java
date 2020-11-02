@@ -5,13 +5,14 @@ import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.List;
 
 public class StringCollectionUtilTest {
     @Test
     void resetWordsByLengthTest() {
         StringCollectionUtil stringCollectionUtil = new StringCollectionUtil();
-        List<String> gList = new ArrayList<String>();
+        Collection<String> gList = new ArrayList<String>();
         gList.add("die farben");
         gList.add("braun");
         gList.add("grun");
@@ -29,7 +30,7 @@ public class StringCollectionUtilTest {
     @Test
     void removeWordsByLengthTest() {
         StringCollectionUtil stringCollectionUtil = new StringCollectionUtil();
-        List<String> gList = new ArrayList<String>();
+        Collection<String> gList = new ArrayList<String>();
         gList.add("die farben");
         gList.add("braun");
         gList.add("grun");
