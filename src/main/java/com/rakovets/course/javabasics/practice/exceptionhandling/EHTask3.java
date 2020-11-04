@@ -16,7 +16,6 @@ public class EHTask3 {
             }
         } catch (MyException e) {
             System.out.println(e.getStackTrace());
-            System.out.println(e.getMessage());
         }
     }
 }
