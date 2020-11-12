@@ -11,17 +11,16 @@ import java.io.InputStreamReader;
 
 public class FileAnalyzeUtil {
     public static void main(String[] args) {
-        // getFileStrings();
-        //  getWordsStartWithVowels();
-        //   getWordsWithEqualFirstAndLastChars();
-        getIncreasingNumbers("src/main/resources/test2");
+            getFileStrings();
+            getWordsStartWithVowels();
+            getWordsWithEqualFirstAndLastChars();
+            getIncreasingNumbers("src/main/resources/test2");
     }
-
     public static void getFileStrings() {
         FileInputStream fis = null;
         int i = 0;
         try {
-            fis = new FileInputStream("//D:/home/smargun/dev/course-java-basics/src/main/resources/test.txt");
+            fis = new FileInputStream("src/main/resources/test.txt");
             while ((i = fis.read()) != -1) {
                 System.out.print((char) i);
             }
@@ -37,7 +36,7 @@ public class FileAnalyzeUtil {
         boolean print = false;
 
         try {
-            fis = new FileInputStream("//D:/home/smargun/dev/course-java-basics/src/main/resources/test.txt");
+            fis = new FileInputStream("src/main/resources/test.txt");
             while ((i = fis.read()) != -1) {
                 chars.add(i);
             }
@@ -89,7 +88,7 @@ public class FileAnalyzeUtil {
         int i = 0;
         ArrayList<Character> chars = new ArrayList<Character>();
         try {
-            fis = new FileInputStream("//D:/home/smargun/dev/course-java-basics/src/main/resources/test.txt");
+            fis = new FileInputStream("src/main/resources/test.txt");
             while ((i = fis.read()) != -1) {
                 text += (char) i;
             }
