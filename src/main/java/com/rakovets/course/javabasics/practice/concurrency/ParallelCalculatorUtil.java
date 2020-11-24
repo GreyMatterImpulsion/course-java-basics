@@ -33,7 +33,7 @@ public class ParallelCalculatorUtil {
         return list;
     }
 
-    //-------------Task2
+    //-------------Task2, 3
 
     public static int[] maxValuesWithThreads(List<int[]> list, int threadQuantity) throws InterruptedException {
         int[] result = new int[list.size()];
@@ -64,10 +64,4 @@ public class ParallelCalculatorUtil {
         System.out.println("Processing with " + threadQuantity +" thread(s) took " + (finish - start) + " millis");
         return result;
     }
-
-    //-----------------Task3
-
-
-
-
 }

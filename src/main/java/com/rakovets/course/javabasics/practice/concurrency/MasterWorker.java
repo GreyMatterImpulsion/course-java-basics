@@ -13,7 +13,7 @@ import java.util.Scanner;
  ---Когда у thread-worker нет текущих задач, то он выводит в Standard Output: …​ и засыпает на 1 секунду.
  */
 public class MasterWorker {
-    public static void main(String[] args) {
+    public static void masterAndWorkerThreads(String[] args) {
         int a = 0;
         Scanner scanner = new Scanner(System.in);
         while (a != -1) {
