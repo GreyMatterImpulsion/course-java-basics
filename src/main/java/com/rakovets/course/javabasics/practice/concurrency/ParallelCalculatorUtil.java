@@ -5,8 +5,8 @@ import java.util.List;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import static java.util.Arrays.sort;
-
 public class ParallelCalculatorUtil {
+
 
     //--------------Task 1
     public static int[] getArraysAndMaxMembers(ArrayList<int[]> list) {
