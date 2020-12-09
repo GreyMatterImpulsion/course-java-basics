@@ -1,5 +1,4 @@
 package com.rakovets.course.javabasics.practice.reflection;
-
 import java.lang.reflect.Field;
 
 public class ReflectionUtil {
